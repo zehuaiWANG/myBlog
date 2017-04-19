@@ -4,7 +4,7 @@ title:      "Hello 2017"
 subtitle:   " \"Hello World, Hello Blog\""
 date:       2017-04-19 19:00:00
 author:     "Mike"
-header-img: "img/post-bg-20157.jpg"
+header-img: "img/post-bg-2017.jpg"
 catalog: true
 tags:
     - 生活
