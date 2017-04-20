@@ -73,4 +73,4 @@ Selenium是一个用于Web应用程序测试的工具。Selenium 测试直接运
 
 如果你也喜欢我的项目，欢迎star和follow我，感激不尽。
 
-—— Mike 后记于 2017.10
+—— Mike 后记于 2017.4.20
