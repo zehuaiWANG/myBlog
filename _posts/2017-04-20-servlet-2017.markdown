@@ -1,0 +1,67 @@
+---
+layout:     post
+title:      "Servlet 2017"
+subtitle:   " \"Servlet归纳总结\""
+date:       2017-04-19 19:00:00
+author:     "Mike"
+header-img: "img/post-bg-2017.jpg"
+catalog: true
+tags:
+    - 生活
+---
+
+> “Yeah It's on. ”
+
+## 什么是Servlet？
+
+servlet 是运行在 Web 服务器中的小型 Java 程序（即：服务器端的小应用程序）。servlet 通常通过 HTTP（超文本传输协议）接收和响应来自 Web 客户端的请求。
+
+1.1 编写一个servlet程序：
+![](http://i.imgur.com/xeoU1bG.jpg)
+
+1.2 执行过程
+![](http://i.imgur.com/k8JU9mi.png)
+<p id = "build"></p>
+---
+
+## Servlet生命周期
+
+实例化-->初始化-->服务->销毁  
+
+出生：（实例化-->初始化）第一次访问Servlet就出生（默认情况下）
+活着：（服务）应用活着，servlet就活着
+死亡：（销毁）应用卸载了servlet就销毁
+![](http://i.imgur.com/DsudMhM.jpg)
+
+让servlet在服务器启动时就创建
+![](http://i.imgur.com/mb64C1n.png)
+
+## 实现Servlet的方式
+1.上面使用过的实现javax.servlet.Servlet接口
+2.继承javax.servet.GenericServlet类(适配器模式)
+![](http://i.imgur.com/dGH8ZqA.png)
+GenericServlet类实现了Servlet接口，GenericServlet类中的方法如下:
+![](http://i.imgur.com/nAPaeEz.png)
+由图可知，GenericServlet类除了实现Servlet接口中的四个方法外，还定义了getInitParameter()返回Servlet的参数值、getInitParameterNames()返回Servlet的参数名、getServletName()返回Servlet名、getServletContext()返回Servlet上下文、不带参数的init()、log()等方法。后面会具体写
+3.继承javax.servlet.http.HttpServlet类（模板方法设计模式）
+![](http://i.imgur.com/TwUvkT7.png)
+
+## Servlet获取配置信息
+1.ServletConfig的使用
+![](http://i.imgur.com/FhUQj87.png)
+2.ServletContext的使用
+ServletContext: 代表的是整个应用。一个应用只有一个ServletContext对象。单实例。
+![](http://i.imgur.com/5fnaNex.png)
+获取全局配置信息：
+修改web.xml文件：
+![](http://i.imgur.com/Xt5QcDF.png)
+获取资源路径：
+![](http://i.imgur.com/DtRPwZR.png)
+实现Servlet的转发：
+![](http://i.imgur.com/0An8Db7.png)
+ RequestDispatcher  getRequestDispatcher(String path) ;//参数表示要跳转到哪去
+
+如果你恰好逛到了这里，希望你也能喜欢这个博客主题。
+如果你也喜欢我的项目，欢迎star和follow我，感激不尽
+
+—— Mike 后记于 2017.10
