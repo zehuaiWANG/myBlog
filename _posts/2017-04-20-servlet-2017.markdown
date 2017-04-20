@@ -4,10 +4,10 @@ title:      "Servlet"
 subtitle:   " \"Servlet归纳总结\""
 date:       2017-04-19 19:00:00
 author:     "Mike"
-header-img: "img/post-bg-2017.jpg"
+header-img: "img/20.png"
 catalog: true
 tags:
-    - 生活
+    - javaweb
 ---
 
 > “Yeah It's on. ”
