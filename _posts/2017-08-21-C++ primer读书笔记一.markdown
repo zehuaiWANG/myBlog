@@ -1,0 +1,48 @@
+---
+layout:     post
+title:      "C++ Primer学习笔记"
+subtitle:   " \"第二章\""
+date:       2017-08-20 12:00:00
+author:     "Mike"
+header-img: "img/2.png"
+catalog: true
+tags:
+    - C++
+---
+
+> “Come on. ”
+
+## 2.1基本内置类型
+
+![](http://i.imgur.com/PTkLLwP.png)
+<br/>1.基本的字符类型是char，一个char的空间应确保可以存放机器基本字符集中任意字符对应的数字值，也就是说，一个char和一个机器字节一样。其他字符用于扩展字符集，如wchar_t确保可以存放机器基本字符集中任意字符对应的数字值，char16_t、char32_t则为Unicode字符集服务(P30)
+<br/>2.C++规定一个int至少和一个short一样大，一个long至少和一个int一样大，一个long long至少和一个long一样大。long long是C++11新定义的。(P30、31)
+<br/>3.通常，float以1个字节(32比特)来表示，double以2个字节(64位)来表示，long double以3、4个字节（96或128位）来表示。一般来说，float和double分别有7、32位有效数字。(P31)
+<br/>4.除去布尔类型和扩展的字符型之外，其他整型可以划分为带符号(signed)的和无符号的(unsigned)。类型int、short、long、long long都是带符号的，通过在这些类名前面添加unsigned就可以得到无符号类型，例如unsigned long。unsigned int可以缩写成unsigned。与其它整型不同，字符型被分成了三种:char、signed char和unsigned char。(char和signed char不同,char可能是signed char，也可能是unsigned char).（P31)
+<br/>5.无符号类型中所有比特都用来存储值，例如，8比特的unsigned char可以表示0至255区间的所有值。而C++标准并没有规定带符号类型应如何表示，但约定了在表示范围内的正值和负值应该平衡。因此8比特的signed char理论上应该表示-127至127区间的值，大多数计算机将实际表示方位定为-128至127.(P32）
+<br/>6.选择类型的标准(P32)：
+<br/>[1]当明确不可能为负的时候，选择无符号类型。
+<br/>[2]使用int执行整数运算。在实际应用中，short常常显得太小而long一般与int有一样的尺寸，如果超过int，就用long long。
+<br/>[3]算术运算不要用char或bool，只有在存放字符或布尔值的时候才使用它们。因为char在一些机器上是有符号的，在另一些机器上是无符号的。如果你需要使用一个不大的整数，需要明确指出它的类型是unsigned char还是signed char。
+<br/>[4]执行浮点型选用double，float精度不够而且计算代价跟double相差无几。long double提供的精度在一般下是没有必要的，而且计算代价不容忽视。
+<br/>7.类型转换(P33):
+<br/>[1]unsigned char c = -1; //假设char占8比特，c的值为255
+<br/>当我们赋给无符号类型一个超出它表示范围的值时，结果是初始值对无符号类型表示数值总和取余。-1取余256等于255。
+<br/>[2]signed char c2 = 256; //假设char占8比特，c2的值是未定义的
+<br/>当我们赋值给带符号类型一个超出它表示范围的值时，结果是未定义的。此时，程序可能继续运行，可能崩溃，也可能产生垃圾数据。
+<br/>[3]当我们将一个非布尔类型的算术赋值给布尔类型时，初始值为0，则结果为false，否则结果为true。当我们把一个布尔值赋值给非布尔类型时，初始值为flase则为0，初始值为true则为1。
+
+
+## 未完待续
+
+
+
+
+
+
+
+如果你恰好逛到了这里，希望你也能喜欢这个博客主题。
+
+如果你也喜欢我的项目，欢迎star和follow我，感激不尽。
+
+—— Mike 后记于 2017.4.20
