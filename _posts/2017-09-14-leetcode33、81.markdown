@@ -1,0 +1,36 @@
+---
+layout:     post
+title:      "Search in Rotated Sorted Array"
+subtitle:   " \"leetcode 33 81 两道二分查找的变型\""
+date:       2017-09-14 12:00:00
+author:     "Mike"
+header-img: "img/2.png"
+catalog: true
+tags:
+    - C++
+---
+
+> “Come on. ”
+
+## 题目 33
+![](https://i.imgur.com/UdNJAkn.png)
+
+
+## 我的答案
+![](https://i.imgur.com/XL7IUgE.png)
+
+## 题目 81
+![](https://i.imgur.com/7RANhV8.png)
+
+## 我的答案
+![](https://i.imgur.com/jas84T7.png)
+
+
+
+
+
+如果你恰好逛到了这里，希望你也能喜欢这个博客主题。
+
+如果你也喜欢我的项目，欢迎star和follow我，感激不尽。
+
+—— Mike 后记于 2017.9.14
