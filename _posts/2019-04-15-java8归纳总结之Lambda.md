@@ -289,9 +289,9 @@ optional.ifPresent((s) -> System.out.println(s.charAt(0)));     // "b"
 
 ###Java8集合类接口变化
 
-![1555225999234](https://github.com/zehuaiWANG/Test/tree/master/_posts/img/java8_1.png)
+![1555225999234](img/java8_1.png)
 
-![1555225999235](https://github.com/zehuaiWANG/Test/tree/master/_posts/img/java8_2.png)
+![1555225999235](img/java8_2.png)
 
 ### Collection中的新方法
 
