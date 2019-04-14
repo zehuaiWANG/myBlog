@@ -448,7 +448,7 @@ list.sort((str1, str2) -> str1.length() - str2.length());
 
 ### Map中的新方法
 
-####forEach()
+#### forEach()
 
 该方法签名为`void forEach(BiConsumer<? super K,? super V> action)`，作用是**对Map中的每个映射执行action指定的操作**，其中`BiConsumer`是一个函数接口，里面有一个待实现方法`void accept(T t, U u)`。`BinConsumer`接口名字和`accept()`方法名字都不重要，请不要记忆他们。
 
@@ -495,7 +495,7 @@ map.forEach((k, v) -> System.out.println(k + "=" + v));
 }
 ```
 
-####getOrDefault()
+#### getOrDefault()
 
 该方法跟Lambda表达式没关系，但是很有用。方法签名为`V getOrDefault(Object key, V defaultValue)`，作用是**按照给定的key查询Map中对应的value，如果没有找到则返回defaultValue**。使用该方法程序员可以省去查询指定键值是否存在的麻烦．
 
@@ -517,15 +517,15 @@ if(map.containsKey(4)){ // 1
 System.out.println(map.getOrDefault(4, "NoValue")); // 2
 ```
 
-#####putIfAbsent()
+##### putIfAbsent()
 
 该方法跟Lambda表达式没关系，但是很有用。方法签名为`V putIfAbsent(K key, V value)`，作用是只有在**不存在key值的映射或映射值为null时**，才将`value`指定的值放入到`Map`中，否则不对`Map`做更改．该方法将条件判断和赋值合二为一，使用起来更加方便．
 
-#####remove()
+##### remove()
 
 我们都知道`Map`中有一个`remove(Object key)`方法，来根据指定`key`值删除`Map`中的映射关系；Java8新增了`remove(Object key, Object value)`方法，只有在当前`Map`中**key正好映射到value时**才删除该映射，否则什么也不做．
 
-####replace()
+#### replace()
 
 在Java7及以前，要想替换`Map`中的映射关系可通过`put(K key, V value)`方法实现，该方法总是会用新值替换原来的值．为了更精确的控制替换行为，Java8在`Map`中加入了两个`replace()`方法，分别如下：
 
@@ -578,7 +578,7 @@ map.put(3, "three");
 map.replaceAll((k, v) -> v.toUpperCase());
 ```
 
-####merge()
+#### merge()
 
 该方法签名为`merge(K key, V value, BiFunction<? super V,? super V,? extends V> remappingFunction)`，作用是：
 
@@ -593,7 +593,7 @@ map.replaceAll((k, v) -> v.toUpperCase());
 map.merge(key, newMsg, (v1, v2) -> v1+v2);
 ```
 
-####compute()
+#### compute()
 
 该方法签名为`compute(K key, BiFunction<? super K,? super V,? extends V> remappingFunction)`，作用是把`remappingFunction`的计算结果关联到`key`上，如果计算结果为`null`，则在`Map`中删除`key`的映射．
 
@@ -603,7 +603,7 @@ map.merge(key, newMsg, (v1, v2) -> v1+v2);
 map.compute(key, (k,v) -> v==null ? newMsg : v.concat(newMsg));
 ```
 
-####computeIfAbsent()
+#### computeIfAbsent()
 
 该方法签名为`V computeIfAbsent(K key, Function<? super K,? extends V> mappingFunction)`，作用是：只有在当前`Map`中**不存在key值的映射或映射值为null时**，才调用`mappingFunction`，并在`mappingFunction`执行结果非`null`时，将结果跟`key`关联．
 
@@ -627,7 +627,7 @@ map.computeIfAbsent(1, v -> new HashSet<String>()).add("yi");
 
 使用`computeIfAbsent()`将条件判断和添加操作合二为一，使代码更加简洁．
 
-### computeIfPresent()
+#### computeIfPresent()
 
 该方法签名为`V computeIfPresent(K key, BiFunction<? super K,? super V,? extends V> remappingFunction)`，作用跟`computeIfAbsent()`相反，即，只有在当前`Map`中**存在key值的映射且非null时**，才调用`remappingFunction`，如果`remappingFunction`执行结果为`null`，则删除`key`的映射，否则使用该结果替换`key`原来的映射．
 
