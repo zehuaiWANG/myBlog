@@ -1,11 +1,11 @@
 # Site settings
-title: Mike Blog
-SEOTitle: 王泽淮的博客 | Mike Blog
+title: Edsel Blog
+SEOTitle: 王泽淮的博客 | Edsel Blog
 header-img: img/home-bg.jpg
 email: 874697675@qq.com
 description: "关于前端与Java、技术与生活 | 王泽淮，JavaWeb & Front-end lover，UI Designer | 这里是 @Mike王泽淮 的个人博客，与你一起发现更大的世界。"
-keyword: "王泽淮, Mike王泽淮, wzh, 王泽淮的博客, Mike Blog, 博客, 个人网站, 互联网, 前端, 设计"
-url: "https://huangxuan.me"              # your host, for absolute URL
+keyword: "王泽淮, Mike王泽淮, wzh, 王泽淮的博客, Edsel Blog, 博客, 个人网站, 互联网, 后端, 设计"
+url: "https://www.edselwang.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
