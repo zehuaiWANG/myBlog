@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "副本机制和其他副本机制：部署托管的pod"
+title:      "kubernetes：用code-generator生成代码"
 subtitle:   " \"Kubernetes\""
 date:       2020-03-15 12:00:00
 author:     "edsel"
